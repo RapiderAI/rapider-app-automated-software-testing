@@ -1,0 +1,2903 @@
+{
+  "name": "Rapider Automated Software Testing",
+  "key": "automated-software-testing",
+  "domainKey": "DEV",
+  "appSuite": {
+    "key": "DEV",
+    "title": "Rapider Developer Suite"
+  },
+  "type": "App",
+  "description": "Automated Software Testing enterprise microapplication in the Rapider Developer Suite.",
+  "isPublic": true,
+  "tags": [
+    "dev",
+    "automated-software-testing",
+    "top-200"
+  ],
+  "iconUrl": "fas fa-code",
+  "icon": "fas fa-code",
+  "route": "automated-software-testing",
+  "rating": 5,
+  "reviewCount": 0,
+  "status": "app-metadata-completed",
+  "coverPage": "<!-- Rapider Official App SOW & Specification | App #106: Automated Software Testing (automated-software-testing) | Domain: DEV -->\n\n# #106 Automated Software Testing (`automated-software-testing`) — Scope of Work (SOW)\n\n- **App Number & Name:** `#106 Automated Software Testing`\n- **Proposed App Key:** `automated-software-testing`\n- **Domain / Suite & Model Prefix:** `DEV` (`Dev*`) — Category `11. Software Development & DevOps`\n- **Representative Benchmark (`P1`):** `BrowserStack`\n- **Combined Feature Catalog:** [../combined-features/106-automated-software-testing-features.md](../combined-features/106-automated-software-testing-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Automated Software Testing (`automated-software-testing`)** unifies test case authoring, cross-browser/real-device execution matrices, CI/CD test report observability, Percy-style visual snapshot regression review, automated WCAG 2.2 AA accessibility auditing, and release quality gates inside the Rapider `DEV` suite. Instead of juggling disconnected spreadsheets, raw CI console logs, unreviewed screenshot folders, and flaky E2E specs that erode developer trust, QA and engineering teams govern software quality end-to-end from `ApmIssue` requirement to production sign-off.\n\n- **SME & Startup Fast-Path:** A lean product team connects their Playwright, Cypress, or JUnit CI pipeline via a single reporter token (`ingestTestRunReport`), immediately gaining rich failure screenshots/videos/HAR logs, visual diff baselines across `390px`/`768px`/`1440px` (`light`/`dark`), automatic flaky-spec detection, and 1-click bug creation into `ApmIssue`.\n- **Enterprise Progressive Disclosure:** Multi-squad organizations unlock hierarchical `DevTestSuite` release plans, requirements traceability matrices against `ApmEpic` / `ApmIssue`, multi-OS/browser `DevTestEnvironmentMatrix` sharding, `#105` feature-flag variant matrix runs, mandatory `DevQualityGate` pass-rate & WCAG gates with governed Home `WorkItem` waivers, and grounded AI test generation/locator self-healing proposals.\n- **Measurable Business & Engineering Outcomes:**\n  1. Cut escaped production UI, functional, and accessibility defects by **60%–80%** via automated cross-viewport visual baselines and WCAG 2.2 AA release gates.\n  2. Reclaim **30%–50% of lost CI developer hours** by automatically detecting, scoring (`Decimal128` `flakinessRate`), and quarantining flaky E2E tests before they block unrelated pull requests.\n  3. Compress failed-test triage from **45 minutes to under 5 minutes** by pairing video/HAR/DOM evidence directly with correlated `#104` backend stack traces (`traceId`).\n- **Top 6 Global Benchmarks Synthesized (`P1`–`P6`):** `BrowserStack` (`P1` — Representative Product), `Sauce Labs` (`P2`), `Tricentis Tosca & qTest` (`P3`), `LambdaTest HyperExecute` (`P4`), `Microsoft Azure Test Plans & Playwright Testing` (`P5`), and `ServiceNow Automated Test Framework (ATF)` (`P6`).\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In-Scope\n- Authoring, versioning, and organizing `DevTestCase` items (`FUNCTIONAL`, `E2E_UI`, `API`, `VISUAL`, `ACCESSIBILITY`, `SECURITY_ACL`) and `DevTestSuite` hierarchies linked to `ApmEpic`/`ApmIssue` (`AST-001`–`AST-004`).\n- Managing `DevTestEnvironmentMatrix` configurations (browsers, real mobile devices, `390px`/`768px`/`1440px` viewports, `light`/`dark` themes), orchestrating/ingesting CI `DevTestRun` and `DevTestResult` executions, and storing video/HAR/trace artifacts in Platform Files (`AST-005`–`AST-009`, `AST-020`, `AST-021`).\n- Percy-style `DevVisualSnapshot` baseline comparison, stabilization masking, side-by-side approval/rejection, and automated `DevAccessibilityFinding` WCAG 2.2 AA violation tracking (`AST-010`–`AST-012`).\n- `Decimal128` flakiness scoring, smart `QUARANTINED` workflow, `#104`/`#105` cross-app test correlation, `DevQualityGate` enforcement with Home `WorkItem` waivers, exploratory charters, and grounded AI QA assistants (`AST-013`–`AST-019`, `AST-022`–`AST-028`).\n\n### Out-of-Scope\n- Static source-code SAST, cyclomatic complexity, code smell analysis, and line-level unit-test Sonar coverage Duplication gates (owned by `#107 Code Quality & Static Analysis`).\n- Production live-user runtime crash ingestion and source-map symbolication (owned by `#104 Application Error Tracking`).\n- Agile sprint backlog prioritization, story-point estimation, and roadmap capacity planning (owned by `APM` / `planning` and `#108 Product Roadmap Management`).\n- Infrastructure load/DDoS network packet simulation and cloud host telemetry (owned by `#083 Cloud Infrastructure Monitoring`).\n\n### Cross-Suite Ownership & Integration Contract\n\n| Domain / App | Owns (Canonical System of Record) | Integration Contract with `#106` (`automated-software-testing`) |\n| :--- | :--- | :--- |\n| **`#106` (`automated-software-testing`)** | `DevTestCase`, `DevTestSuite`, `DevTestEnvironmentMatrix`, `DevTestRun`, `DevTestResult`, `DevVisualSna",
+  "scopeOfWork": "<!-- Rapider Official App SOW & Specification | App #106: Automated Software Testing (automated-software-testing) | Domain: DEV -->\n\n# #106 Automated Software Testing (`automated-software-testing`) — Scope of Work (SOW)\n\n- **App Number & Name:** `#106 Automated Software Testing`\n- **Proposed App Key:** `automated-software-testing`\n- **Domain / Suite & Model Prefix:** `DEV` (`Dev*`) — Category `11. Software Development & DevOps`\n- **Representative Benchmark (`P1`):** `BrowserStack`\n- **Combined Feature Catalog:** [../combined-features/106-automated-software-testing-features.md](../combined-features/106-automated-software-testing-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Automated Software Testing (`automated-software-testing`)** unifies test case authoring, cross-browser/real-device execution matrices, CI/CD test report observability, Percy-style visual snapshot regression review, automated WCAG 2.2 AA accessibility auditing, and release quality gates inside the Rapider `DEV` suite. Instead of juggling disconnected spreadsheets, raw CI console logs, unreviewed screenshot folders, and flaky E2E specs that erode developer trust, QA and engineering teams govern software quality end-to-end from `ApmIssue` requirement to production sign-off.\n\n- **SME & Startup Fast-Path:** A lean product team connects their Playwright, Cypress, or JUnit CI pipeline via a single reporter token (`ingestTestRunReport`), immediately gaining rich failure screenshots/videos/HAR logs, visual diff baselines across `390px`/`768px`/`1440px` (`light`/`dark`), automatic flaky-spec detection, and 1-click bug creation into `ApmIssue`.\n- **Enterprise Progressive Disclosure:** Multi-squad organizations unlock hierarchical `DevTestSuite` release plans, requirements traceability matrices against `ApmEpic` / `ApmIssue`, multi-OS/browser `DevTestEnvironmentMatrix` sharding, `#105` feature-flag variant matrix runs, mandatory `DevQualityGate` pass-rate & WCAG gates with governed Home `WorkItem` waivers, and grounded AI test generation/locator self-healing proposals.\n- **Measurable Business & Engineering Outcomes:**\n  1. Cut escaped production UI, functional, and accessibility defects by **60%–80%** via automated cross-viewport visual baselines and WCAG 2.2 AA release gates.\n  2. Reclaim **30%–50% of lost CI developer hours** by automatically detecting, scoring (`Decimal128` `flakinessRate`), and quarantining flaky E2E tests before they block unrelated pull requests.\n  3. Compress failed-test triage from **45 minutes to under 5 minutes** by pairing video/HAR/DOM evidence directly with correlated `#104` backend stack traces (`traceId`).\n- **Top 6 Global Benchmarks Synthesized (`P1`–`P6`):** `BrowserStack` (`P1` — Representative Product), `Sauce Labs` (`P2`), `Tricentis Tosca & qTest` (`P3`), `LambdaTest HyperExecute` (`P4`), `Microsoft Azure Test Plans & Playwright Testing` (`P5`), and `ServiceNow Automated Test Framework (ATF)` (`P6`).\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In-Scope\n- Authoring, versioning, and organizing `DevTestCase` items (`FUNCTIONAL`, `E2E_UI`, `API`, `VISUAL`, `ACCESSIBILITY`, `SECURITY_ACL`) and `DevTestSuite` hierarchies linked to `ApmEpic`/`ApmIssue` (`AST-001`–`AST-004`).\n- Managing `DevTestEnvironmentMatrix` configurations (browsers, real mobile devices, `390px`/`768px`/`1440px` viewports, `light`/`dark` themes), orchestrating/ingesting CI `DevTestRun` and `DevTestResult` executions, and storing video/HAR/trace artifacts in Platform Files (`AST-005`–`AST-009`, `AST-020`, `AST-021`).\n- Percy-style `DevVisualSnapshot` baseline comparison, stabilization masking, side-by-side approval/rejection, and automated `DevAccessibilityFinding` WCAG 2.2 AA violation tracking (`AST-010`–`AST-012`).\n- `Decimal128` flakiness scoring, smart `QUARANTINED` workflow, `#104`/`#105` cross-app test correlation, `DevQualityGate` enforcement with Home `WorkItem` waivers, exploratory charters, and grounded AI QA assistants (`AST-013`–`AST-019`, `AST-022`–`AST-028`).\n\n### Out-of-Scope\n- Static source-code SAST, cyclomatic complexity, code smell analysis, and line-level unit-test Sonar coverage Duplication gates (owned by `#107 Code Quality & Static Analysis`).\n- Production live-user runtime crash ingestion and source-map symbolication (owned by `#104 Application Error Tracking`).\n- Agile sprint backlog prioritization, story-point estimation, and roadmap capacity planning (owned by `APM` / `planning` and `#108 Product Roadmap Management`).\n- Infrastructure load/DDoS network packet simulation and cloud host telemetry (owned by `#083 Cloud Infrastructure Monitoring`).\n\n### Cross-Suite Ownership & Integration Contract\n\n| Domain / App | Owns (Canonical System of Record) | Integration Contract with `#106` (`automated-software-testing`) |\n| :--- | :--- | :--- |\n| **`#106` (`automated-software-testing`)** | `DevTestCase`, `DevTestSuite`, `DevTestEnvironmentMatrix`, `DevTestRun`, `DevTestResult`, `DevVisualSnapshot`, `DevAccessibilityFinding`, `DevQualityGate` | Publishes `dev.test.run_completed.v1` and `dev.test.quality_gate_evaluated.v1` events; serves requirement coverage & pass-rate metrics. |\n| **`APM` (`planning` / `apm`)** | `ApmProject`, `ApmEpic`, `ApmSprint`, `ApmIssue` | `DevTestCase.requirementIssueIds` links user stories for coverage; failed `DevTestResult` or flaky quarantine creates/links bug `ApmIssue` records. |\n| **`#104` (`application-error-tracking`)** | `DevErrorIssue`, `DevErrorEvent` | `DevTestResult` stores W3C `traceId` linking E2E `500` failures to `#104` stack traces; `#104` AI reproduction steps scaffold draft regression `DevTestCase` items. |\n| **`#105` (`feature-flag-management`)** | `DevFeatureFlag`, `DevFlagEnvironment` | `DevTestRun` accepts `flagOverrides` (`#105` keys/variants) so both `on` and `off` code paths are verified prior to production rollout. |\n| **`#107` (`code-quality-and-static-analysis`)** | `DevCodeAnalysisRun`, `DevCodeQualityGate` | `#106` handles dynamic runtime/UI/API/visual/WCAG execution gates while `#107` handles static AST/SAST/coverage gates on pull requests. |\n| **Platform Core Services** | Identity/RBAC, Secret Manager, Files/Drive, Notebooks, Home `WorkItem`s, `projectChannelMessage` | Screenshots, `.webp` videos, Playwright traces, and HAR logs live in Platform Files; quality-gate waiver requests emit Home `WorkItem`s; AI & QA reviews use `projectChannelMessage`. |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nEvery visible sidebar section strictly enforces the **Minimum 3 Items Rule** (`Test Repository & Suites` = 3 items, `Execution & Visual QA` = 3 items, `Observability & Gates` = 3 items; detail and drawer routes set `displayOnMenu: false`).\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX Standards |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | `dashboard` | Quality & Test Pulse | `Test Repository & Suites` | `true` (Order 1) | KPI cards (`countSWR`/`findSWR`) for 7d Pass Rate %, Active Suites, Unreviewed Visual Diffs, Open WCAG Criticals, and Quarantined Specs; recent `DevTestRun` timeline. |\n| 2 | `test-cases` | Test Case Catalog | `Test Repository & Suites` | `true` (Order 2) | Dual Table + `<rapider-kanban>` Lifecycle Board (`DRAFT`, `READY`, `QUARANTINED`, `DEPRECATED`); `#activeFilterTagsBar` with `Clear all`; `ApmIssue` coverage badge; clickable case title/code (`test-case-drawer` edit / run history). |\n| 3 | `test-suites` | Suites & Release Plans | `Test Repository & Suites` | `true` (Order 3) | Hierarchical `DevTestSuite` table with target pass-rate (`Decimal128`), linked `ApmEpic`, scheduled nightly trigger toggle, and **Trigger Suite Run** primary CTA. |\n| 4 | `test-runs` | CI Runs & Device Matrix | `Execution & Visual QA` | `true` (Order 4) | Real-time & historical `DevTestRun` list showing Git branch/PR, `DevTestEnvironmentMatrix` badges, pass/fail/flaky bar, duration, and clickable run identifier (`test-run-detail`). |\n| 5 | `visual-reviews` | Visual Regression & Baselines | `Execution & Visual QA` | `true` (Order 5) | `<rapider-kanban>` & Grid (`UNREVIEWED_DIFF`, `APPROVED_BASELINE`, `REJECTED_REGRESSION`) across `390px`/`768px`/`1440px` and `light`/`dark` themes; clicks through to `visual-snapshot-detail`. |\n| 6 | `accessibility` | WCAG Accessibility Audits | `Execution & Visual QA` | `true` (Order 6) | `DevAccessibilityFinding` table grouped by WCAG 2.2 rule (`AA`/`AAA`), route, severity (`CRITICAL`, `SERIOUS`, `MODERATE`), DOM selector, and 1-click `ApmIssue` bug creation. |\n| 7 | `flaky-quarantine` | Flaky Tests & Quarantine | `Observability & Gates` | `true` (Order 7) | Leaderboard of specs sorted by `Decimal128` `flakinessRate`, flip-flop commit evidence, **Quarantine Spec** / **Restore to Ready** guarded actions, and linked stabilization `ApmIssue`. |\n| 8 | `quality-gates` | Release Gates & Matrices | `Observability & Gates` | `true` (Order 8) | Tabbed configuration for `DevQualityGate` rules (pass %, max WCAG criticals, visual sign-off) and reusable `DevTestEnvironmentMatrix` browser/device profiles + Home `WorkItem` waivers. |\n| 9 | `analytics` | Coverage & Speed Analytics | `Observability & Gates` | `true` (Order 9) | `ApmEpic` requirement test coverage matrix, slowest p95 spec leaderboard, browser/OS failure heatmap, and Save-to-Notebook report export. |\n| 10 | `test-run-detail` | Test Run Diagnostics & Logs | *(Hidden)* | `false` | Per-browser/viewport `DevTestResult` breakdown, embedded video/screenshot/HAR trace links (Platform Files), `#104` `traceId` jump link, **Create Bug (`ApmIssue`)**, and AI Failure RCA (`projectChannelMessage`). |\n| 11 | `visual-snapshot-detail` | Visual Diff Inspector | *(Hidden)* | `false` | Side-by-side / slider / onion-skin baseline vs. candidate image comparator, `Decimal128` pixel-diff badge, dynamic mask region overlay, inline `projectChannelMessage` thread, and **Approve Baseline** / **Reject** buttons. |\n| 12 | `test-case-drawer` | Create / Edit Test Case | *(Hidden)* | `false` | Sliding form drawer for `DevTestCase` steps, parameter datasets, `ApmIssue` requirement links, and spec path; enforces `try/catch/finally` button reset, SWR cache clear, broadcast, and auto-close. |\n\n**Mandatory Rapider UI Compliance across all 12 Pages:**\n- Initial data loads exclusively invoke `window.rapiderApi.findSWR` and `countSWR` with zero redundant `isDeleted` filter clauses; local in-memory arrays filter `item.isDeleted !== true` and perform optimistic updates on edit/quarantine/approve/delete.\n- Tables never render a standalone \"View\" button in `Actions`; primary identifiers (`runNumber`, `caseCode`, `suiteName`, `snapshotName`) navigate to detail views; `Edit` uses icon + text and `Delete` uses icon-only with `aria-label=\"Delete\"`.\n- Primary and destructive confirmation buttons enforce `#ffffff !important` text contrast; native `alert`/`confirm`/`prompt` dialogs are strictly banned.\n\n---\n\n## 4. Canonical Data Models (`Dev*` — 8 Models)\n\nAll models omit `projectId`, use backend-generated UUIDs (`00000000-xxxx-xxxx-xxxx-xxxxxxxxxxxx` in deterministic fixtures), enforce optimistic `version` concurrency, and store precision ratios as `Decimal128`.\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`DevTestCase`** | `id` (UUID), `caseCode` (String, e.g., `TC-1042`), `title` (String), `testType` (`FUNCTIONAL` \\| `E2E_UI` \\| `API` \\| `VISUAL` \\| `ACCESSIBILITY` \\| `SECURITY_ACL`), `automationMode` (`AUTOMATED` \\| `MANUAL` \\| `HYBRID`), `framework` (`PLAYWRIGHT` \\| `CYPRESS` \\| `SELENIUM` \\| `APPIUM` \\| `JUNIT` \\| `NONE`), `specFilePath` (String?), `steps` (JSON[]), `parameterDataset` (JSON[]?), `flakinessRate` (`Decimal128`), `status` (`DRAFT` \\| `READY` \\| `QUARANTINED` \\| `DEPRECATED`), `priority` (`P0` \\| `P1` \\| `P2`), `version` (Integer) | Refs `requirementIssueIds` (`ApmIssue[]`), `stabilizationIssueId` (`ApmIssue`?), `ownerUserId` (Platform Identity) | `caseCode` unique per workspace; `flakinessRate` in `[0.0000, 100.0000]`; transitioning `status -> QUARANTINED` records mandatory reason and excludes failures from blocking standard PR gates while continuing execution monitoring. |\n| **`DevTestSuite`** | `id` (UUID), `name` (String), `slug` (String), `suiteKind` (`STATIC` \\| `TAG_QUERY`), `includedCaseIds` (UUID[]), `tagFilterQuery` (String?), `defaultMatrixId` (UUID), `qualityGateId` (UUID?), `cronSchedule` (String?), `targetPassRate` (`Decimal128`), `version` (Integer) | Refs `DevTestEnvironmentMatrix`, `DevQualityGate`, optional `linkedApmEpicId` (`ApmEpic`) | `slug` unique per workspace; `STATIC` suites require `>= 1` non-deprecated `DevTestCase` to trigger an automated run. |\n| **`DevTestEnvironmentMatrix`** | `id` (UUID), `name` (String), `targets` (JSON[] — `{ browser, os, deviceModel?, viewportWidth, viewportHeight, theme: 'LIGHT'\\|'DARK', locale }`), `parallelShards` (Integer), `maxRetries` (Integer), `tunnelProfileKey` (String?), `isDefault` (Boolean), `version` (Integer) | Referenced by `DevTestSuite` and `DevTestRun` | Requires `>= 1` target combination; `parallelShards >= 1` and `maxRetries` in `0..5`. |\n| **`DevTestRun`** | `id` (UUID), `runNumber` (String, e.g., `RUN-8821`), `suiteId` (UUID?), `matrixId` (UUID), `triggerSource` (`CI_CD` \\| `MANUAL` \\| `SCHEDULED_CRON` \\| `POST_DEPLOY`), `branchName` (String), `commitSha` (String), `pullRequestRef` (String?), `targetBaseUrl` (String), `flagOverrides` (JSON?), `status` (`QUEUED` \\| `RUNNING` \\| `PASSED` \\| `FAILED` \\| `FLAKY_PASSED` \\| `CANCELLED`), `totalCount` (Integer), `passedCount` (Integer), `failedCount` (Integer), `quarantinedCount` (Integer), `passRatePercent` (`Decimal128`), `gateEvaluationStatus` (`PASSED` \\| `BLOCKED` \\| `WAIVED`), `durationMs` (Long), `startedAt` (DateTime), `completedAt` (DateTime?), `version` (Integer) | Belongs to `DevTestSuite` & `DevTestEnvironmentMatrix`; `flagOverrides` refs `#105` keys; `threadChannelId` (`projectChannelMessage`) | Terminal run counts & `passRatePercent` (`Decimal128`) are immutable once `completedAt` is sealed (except `gateEvaluationStatus` transitioning `BLOCKED -> WAIVED` via approved Home `WorkItem`). |\n| **`DevTestResult`** | `id` (UUID), `runId` (UUID), `testCaseId` (UUID?), `targetDescriptor` (String, e.g., `Chromium 130 / macOS / 1440px / DARK`), `status` (`PASSED` \\| `FAILED` \\| `FLAKY_RETRY_PASSED` \\| `SKIPPED` \\| `QUARANTINED_FAILED`), `attemptCount` (Integer), `failureCategory` (`PRODUCT_BUG` \\| `AUTOMATION_LOCATOR_DRIFT` \\| `ENVIRONMENT_OUTAGE` \\| `VISUAL_DIFF` \\| `FLAKY`?), `errorMessage` (String?), `stackTrace` (String?), `artifactFileIds` (UUID[]), `backendTraceId` (String?), `durationMs` (Long), `version` (Integer) | Belongs to `DevTestRun` and `DevTestCase`; `artifactFileIds` ref Platform Files/Drive; `linkedBugIssueId` refs `ApmIssue`; `backendTraceId` correlates `#104` | **Append-only execution evidence** for status, timing, error stack, and artifact references; post-run triage mutates only `failureCategory` and `linkedBugIssueId`. |\n| **`DevVisualSnapshot`** | `id` (UUID), `runId` (UUID), `snapshotKey` (String), `routeOrComponent` (String), `viewportWidth` (Integer), `theme` (`LIGHT` \\| `DARK`), `baselineFileId` (UUID?), `candidateFileId` (UUID), `diffOverlayFileId` (UUID?), `diffPercentage` (`Decimal128`), `ignoredRegions` (JSON[]), `reviewStatus` (`MATCHED` \\| `UNREVIEWED_DIFF` \\| `APPROVED_BASELINE` \\| `REJECTED_REGRESSION`), `reviewedByUserId` (UUID?), `reviewedAt` (DateTime?), `version` (Integer) | Belongs to `DevTestRun`; image `fileId`s ref Platform Files/Drive | `diffPercentage > toleranceThreshold` initializes `UNREVIEWED_DIFF`; approving promotes `candidateFileId` as the new branch baseline without overwriting historical `DevVisualSnapshot` audit rows. |\n| **`DevAccessibilityFinding`** | `id` (UUID), `runId` (UUID), `routePath` (String), `theme` (`LIGHT` \\| `DARK`), `wcagCriterion` (String, e.g., `1.4.3 Contrast (Minimum)`), `ruleId` (String), `severity` (`CRITICAL` \\| `SERIOUS` \\| `MODERATE` \\| `MINOR`), `domSelector` (String), `htmlSnippet` (String), `remediationHint` (String), `status` (`OPEN` \\| `LINKED_TO_BUG` \\| `FALSE_POSITIVE_WAIVED` \\| `RESOLVED`), `linkedBugIssueId` (UUID?), `version` (Integer) | Belongs to `DevTestRun`; `linkedBugIssueId` refs canonical `ApmIssue` | `htmlSnippet` sanitized on display via `escapeHtml()`; waiving `CRITICAL` findings requires QA Lead permission and audit reason. |\n| **`DevQualityGate`** | `id` (UUID), `name` (String), `minPassRateThreshold` (`Decimal128`), `maxCriticalWcagCount` (Integer), `requireVisualBaselineApproval` (Boolean), `blockOnNewFlakyTests` (Boolean), `requireWaiverApproval` (Boolean), `isDefault` (Boolean), `version` (Integer) | Referenced by `DevTestSuite` and `DevTestRun`; waivers create Platform Home `WorkItem` | `minPassRateThreshold` stored as `Decimal128` (`0.0000`–`100.0000`); if `requireWaiverApproval = true`, only an approved Home `WorkItem` transitions a blocked run to `WAIVED`. |\n\n---\n\n## 5. Core End-to-End User Journeys\n\n1. **SME CI Pipeline Ingestion -> Failure Inspection -> 1-Click `ApmIssue` Bug:**\n   - Developer pushes PR `#412`; Playwright CI finishes and posts results to `ingestTestRunReport`.\n   - QA opens `#/test-runs`, sees `RUN-8821` (`FAILED`, `96.50%` pass rate), clicks `RUN-8821` to open `#/test-run-detail?id=...`, inspects the failed `Checkout Dark Mode` step video, console error, and correlated `#104` `backendTraceId`, and clicks **Create APM Bug**—creating a pre-populated `ApmIssue` linked to the run.\n2. **Percy-Style Multi-Theme Visual Diff Review & Baseline Promotion:**\n   - Design system update modifies primary card padding, flagging 4 `UNREVIEWED_DIFF` items on `#/visual-reviews` across `390px` and `1440px` (`LIGHT` and `DARK`).\n   - Frontend Lead clicks a snapshot card into `#/visual-snapshot-detail`, toggles the side-by-side diff overlay (`diffPercentage = 2.1400%`), verifies intentional styling on `LIGHT`, approves the baseline (`reviewVisualSnapshot`), and rejects `DARK` where a subtle text-contrast overlap appeared—blocking merge until fixed.\n3. **Flaky Spec Detection & Smart Quarantine:**\n   - `TC-1099` fails on attempt 1 and passes on retry across 4 consecutive commits (`flakinessRate = 28.5000%`).\n   - On `#/flaky-quarantine`, QA Lead clicks **Quarantine Spec**, entering reason `\"Third-party map tile timeout\"`, transitioning `TC-1099` to `QUARANTINED` and creating stabilization `ApmIssue` `APM-510` so PR pipelines stay green while reliability is fixed.\n4. **Release Quality Gate Breach & Governed Home `WorkItem` Waiver:**\n   - Hotfix `v2.4.1` passes `100%` of functional E2E tests on `RUN-8840`, but `DevQualityGate` blocks promotion due to 1 `MODERATE`/`SERIOUS` legacy WCAG violation in an untouched footer component.\n   - Engineering Lead requests an emergency hotfix waiver; `requestQualityGateWaiver` emits a shared Rapider Home `WorkItem` to the QA Director with run metrics and risk justification. Approval transitions `gateEvaluationStatus -> WAIVED` with an immutable audit entry.\n5. **List Search, Filter Chips, Click-Through & Back Restoration:**\n   - On `#/test-cases`, user searches `\"checkout\"` and selects `Type: E2E_UI` + `Status: READY`. `#activeFilterTagsBar` displays `Search: \"checkout\" ✕`, `Type: \"E2E_UI\" ✕`, `Status: \"READY\" ✕`, and `Clear all`.\n   - User navigates from `#/test-runs` into `#/test-run-detail?id=...` and clicks `#btnGoBack`, returning to `#/test-runs` with active filter tags and scroll position intact.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages\n\n### `P0` Foundation (MVP Release-Ready Core)\n- **WP-P0-1: Test Case Catalog, Suites & `ApmIssue` Traceability (`AST-001`–`AST-003`, `AST-016`):** `DevTestCase` & `DevTestSuite` CRUD, `<rapider-kanban>` lifecycle board, `ApmEpic`/`ApmIssue` coverage links, `#activeFilterTagsBar`, `#/test-cases`, `test-case-drawer`, `#/test-suites`.\n- **WP-P0-2: Environment Matrices, CI Report Ingestion & Evidence Viewer (`AST-005`–`AST-007`):** `DevTestEnvironmentMatrix`, `DevTestRun`, `DevTestResult` schemas, Playwright/Cypress/JUnit report ingestion command, Platform Files screenshot/video/HAR attachments, `#/dashboard`, `#/test-runs`, `#/test-run-detail`.\n- **WP-P0-3: Visual Baselines & WCAG 2.2 AA Auditing (`AST-010`, `AST-011`):** `DevVisualSnapshot` baseline/candidate comparison (`#/visual-reviews`, `#/visual-snapshot-detail`) and `DevAccessibilityFinding` WCAG scanner ingestion (`#/accessibility`).\n- **WP-P0-4: Flakiness Quarantine, Defect Escalation & Quality Gates (`AST-013`–`AST-015`):** `Decimal128` flakiness engine (`#/flaky-quarantine`), `#104`/`ApmIssue` defect escalation, and `DevQualityGate` evaluation + Home `WorkItem` waivers (`#/quality-gates`).\n\n### `P1` Enterprise Scale & Continuous Quality\n- **WP-P1-1: Parameterized Datasets, Parallel Sharding & Staging Tunnels (`AST-004`, `AST-008`, `AST-009`):** Data-driven parameter sets, shard/retry policies, and Secret-Manager-backed private staging runner profiles.\n- **WP-P1-2: Role/ACL Boundary Tests, Crash-to-Test & Flag Matrix Runs (`AST-012`, `AST-018`–`AST-021`):** Multi-role impersonation security specs, `#104` crash reproduction import, `#105` flag variant matrix runs, API smoke assertions, and cron nightly runs.\n- **WP-P1-3: Coverage & Speed Analytics (`AST-017`):** `#/analytics` requirement coverage matrix, p95 duration bottleneck charts, and Notebook export.\n\n### `P2` Adjacent Capabilities & Grounded AI Agents\n- **WP-P2-1: Exploratory Charters & Synthetic Data Teardown (`AST-022`, `AST-023`):** Exploratory charter sessions and automated test-fixture cleanup verification.\n- **WP-P2-2: Grounded AI Quality Agents (`AST-024`–`AST-028`):** `ApmIssue`-to-`DevTestCase` generator, DOM self-healing locator diff proposals, cascading CI failure root-cause clustering, visual diff noise filter, WCAG HTML fix snippets, and suite deduplication advisor on `projectChannelMessage`.\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **QA Engineer / SDET** | Create/edit `DevTestCase` & `DevTestSuite`; trigger `DevTestRun`; classify `DevTestResult` failures; review `DevVisualSnapshot` non-prod diffs; link `ApmIssue` bugs; invoke AI QA agents on `projectChannelMessage`. | Cannot waive blocked production `DevQualityGate` runs without Lead approval; cannot view plaintext staging tunnel secrets. |\n| **Developer** | View all test cases, CI runs, artifacts, visual diffs, and WCAG findings; trigger branch/PR `DevTestRun`s; submit `DevQualityGate` waiver requests; apply AI locator/WCAG fix snippets in PRs. | Cannot unilaterally quarantine `P0` release-gate test cases or lower `DevQualityGate` `minPassRateThreshold` settings. |\n| **QA Lead / Release Manager** | All QA Engineer actions + configure `DevQualityGate` thresholds, quarantine/restore `DevTestCase` specs, approve `main`/`prod` `DevVisualSnapshot` baselines, and approve/reject Home `WorkItem` gate waivers. | Cannot mutate historical sealed `DevTestRun` or `DevTestResult` execution counts/evidence; self-approval of own waiver request prohibited when 4-eyes policy enabled. |\n| **Workspace Security Admin** | Manage private staging tunnel credentials in Platform Secret Manager, configure HAR/screenshot PII scrubbing policies, and set artifact retention TTLs. | Audited on all policy and retention mutations. |\n| **CI Runner Identity** | Scoped `ingestTestRunReport`, `uploadTestArtifact`, and `evaluateQualityGate` for authorized suites/branches. | Zero interactive administrative or waiver-approval privileges. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Domain Commands\nAll state transitions enforce `idempotencyKey`, `correlationId`, RBAC, and `expectedVersion`:\n- `triggerTestSuiteRun(suiteId, matrixId?, branchName, commitSha, targetBaseUrl, flagOverrides?, idempotencyKey)` -> Initializes `DevTestRun` (`QUEUED`) and dispatches runner shards.\n- `ingestTestRunReport(runId, framework, resultsPayload, visualSnapshots[], wcagFindings[], idempotencyKey)` -> Idempotently persists `DevTestResult`, `DevVisualSnapshot`, and `DevAccessibilityFinding`, computes `Decimal128` `passRatePercent` & `flakinessRate`, and evaluates `DevQualityGate`.\n- `reviewVisualSnapshot(snapshotId, decision, comment?, ignoredRegions?, expectedVersion, idempotencyKey)` -> Transitions `UNREVIEWED_DIFF -> APPROVED_BASELINE | REJECTED_REGRESSION` and re-evaluates run quality gate.\n- `quarantineTestCase(testCaseId, reason, createApmBug, expectedVersion, idempotencyKey)` -> Transitions `DevTestCase` to `QUARANTINED` and optionally creates linked `ApmIssue`.\n- `requestQualityGateWaiver(runId, justification, expectedVersion, idempotencyKey)` / `decideQualityGateWaiver(runId, decision, comment, expectedVersion, idempotencyKey)` -> Routes and resolves governed Rapider Home `WorkItem`.\n\n### Kafka Domain Events (Published & Consumed)\n- **Published:** `dev.test.run_started.v1`, `dev.test.run_completed.v1`, `dev.test.quality_gate_blocked.v1`, `dev.test.quality_gate_passed.v1`, `dev.test.case_quarantined.v1`, `dev.test.visual_regression_detected.v1`.\n- **Consumed:** `dev.deployment.preview_ready.v1` (auto-triggers post-deploy smoke `DevTestSuite`), `apm.issue.updated.v1` (flags linked `DevTestCase` items when requirement acceptance criteria change), `dev.error.regression_handoff.v1` (from `#104` to scaffold regression tests).\n\n### `requiredWorkflows` in `app.manifest.json`\n1. `dev-test-orchestration-and-ingest-wf` (Coordinates matrix shard execution, ingests JUnit/Playwright/WCAG reports, and computes `Decimal128` pass/flakiness metrics).\n2. `dev-test-visual-diff-engine-wf` (Computes pixel/layout diffs between `baselineFileId` and `candidateFileId` in Platform Files while masking configured dynamic regions).\n3. `dev-test-quality-gate-and-waiver-wf` (Evaluates `DevQualityGate` rules on completed runs and manages shared Home `WorkItem` waiver lifecycles).\n4. `dev-test-ai-qa-agents-wf` (Grounded AI generator for test cases, failure clustering, locator drift diffs, and WCAG fixes on `projectChannelMessage`—human review mandatory before promoting cases or committing locator changes).\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **Test Credential Isolation & HAR Sanitization (SOC2 / GDPR):** Test runner credentials and private staging tunnel keys are never hardcoded in `DevTestCase` steps or `parameterDataset` JSON (validated server-side; must reference Platform Secret Manager placeholders). Ingested HAR network archives and console logs automatically strip `Authorization`, `Cookie`, and `Set-Cookie` headers before writing to Platform Files, ensuring \\$0 exposure of session tokens.\n- **XSS-Safe HTML Snippet & Error Rendering:** All `DevAccessibilityFinding.htmlSnippet`, DOM selectors, and `DevTestResult.errorMessage` payloads are rendered strictly as escaped text (`escapeHtml()`) so malicious or broken test payloads cannot execute scripts inside the QA UI.\n- **Artifact Retention & Storage Hygiene:** Passing run videos/HARs follow configurable short TTLs (e.g., 14 days) while failed run evidence and approved `DevVisualSnapshot` baselines are retained per compliance policy (e.g., 180–365 days).\n- **Accessibility & Responsive Parity:** Full WCAG 2.2 AA compliance across `390px`, `768px`, and `1440px` in both `light` and `dark` themes; keyboard-operable visual diff slider and table filters; `findSWR` cached views render `< 150ms` p95.\n\n---\n\n## 10. Deterministic Acceptance Criteria\n\n1. **Zero `projectId` & Platform UUIDs:** All 8 `Dev*` schemas contain zero `projectId` fields, generate backend UUIDs on creation, and use `00000000-xxxx-xxxx-xxxx-xxxxxxxxxxxx` in seed fixtures.\n2. **Idempotent CI Report Ingestion & `Decimal128` Metrics:** Replaying `ingestTestRunReport` with an identical `idempotencyKey` creates zero duplicate `DevTestResult` rows and computes exact `Decimal128` `passRatePercent` (`e.g., 98.7500%`) and `flakinessRate`.\n3. **Secret Rejection & HAR Header Scrubbing:** Attempting to save a `DevTestCase` step containing a raw `Bearer eyJ...` token or `postgres://user:pass@...` URI fails validation; ingested HAR files strip `Authorization` and `Cookie` headers prior to storage.\n4. **Visual Baseline Lifecycle:** Uploading a candidate screenshot with `diffPercentage > tolerance` sets `reviewStatus = UNREVIEWED_DIFF` and blocks a `DevQualityGate` with `requireVisualBaselineApproval = true` until `reviewVisualSnapshot` (`APPROVED_BASELINE`) completes.\n5. **Smart Flaky Quarantine:** Quarantining `TC-1099` moves its `<rapider-kanban>` card to `QUARANTINED`, prevents its failures from failing standard PR gates, and creates/links a stabilization `ApmIssue`.\n6. **Quality Gate Waiver via Home `WorkItem`:** Requesting a waiver on a `BLOCKED` `DevTestRun` emits a Rapider Home `WorkItem`; self-approval is rejected under 4-eyes policy, and authorized QA Lead approval transitions `gateEvaluationStatus -> WAIVED` with audit attribution.\n7. **Sidebar Minimum 3 Items Rule:** All 3 visible sidebar sections (`Test Repository & Suites`, `Execution & Visual QA`, `Observability & Gates`) each contain exactly 3 visible items (`displayOnMenu: true`), while `test-run-detail`, `visual-snapshot-detail`, and `test-case-drawer` set `displayOnMenu: false`.\n8. **SWR Clean Query & Optimistic Updates:** Every page uses `findSWR`/`countSWR` with zero `isDeleted` filter clauses; editing a test case, approving a visual baseline, or deleting a draft suite updates local state and `<rapider-kanban>` optimistically, clears SWR cache, and rolls back on simulated failure.\n9. **Table Actions, Contrast & Dialog Ban:** Zero tables render a \"View\" button in `Actions`; primary identifiers (`runNumber`, `caseCode`, `suiteName`, `snapshotKey`) navigate to detail views; `Edit` is icon + text; `Delete` is icon-only with `aria-label=\"Delete\"`; primary/danger buttons enforce `#ffffff` text; zero `alert`/`confirm`/`prompt` calls exist.\n10. **Active Filter Tags & Clear All:** Searching or filtering `#/test-cases` or `#/test-runs` displays `#activeFilterTagsBar` with HTML-escaped dismissible chips and `Clear all`, synchronously updating list and `<rapider-kanban>` views.\n11. **Drawer Auto-Close & `finally` Reset:** Saving or cancelling `test-case-drawer` closes the drawer, broadcasts `RECORD_CREATED`/`RECORD_UPDATED`, and restores the Save button state inside a `finally` block.\n12. **Click-Through Navigation & Back State Restoration:** Clicking `RUN-8821` on `#/test-runs` transitions to `#/test-run-detail?id=...` without `<base href>` 404 diversion, renders test results, and `#btnGoBack` restores `#/test-runs` with active filters intact.\n13. **Grounded AI Safety:** AI-generated test cases and self-healing locator diffs post as `DRAFT` proposals on `projectChannelMessage` citing `ApmIssue` / DOM evidence and never overwrite active `READY` specs without human confirmation.\n14. **Theme & Responsive Validation:** Automated light/dark `validate_theme` checks and `390px`/`768px`/`1440px` layout validations pass with zero contrast violations or clipped controls.\n",
+  "thumbnailUrl": "",
+  "isolationScope": "ENTERPRISE_SHARED",
+  "dataModels": [
+    {
+      "name": "ApmEpic",
+      "title": "Epic",
+      "description": "A large body of work that can be broken down into smaller issues.",
+      "domainName": "Rapider Project & Portfolio Suite",
+      "domainKey": "APM",
+      "datatableName": "ApmEpic",
+      "dataTableName": "ApmEpic",
+      "sqlTableName": "apm_epic",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "title",
+            "projectId"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "description"
+          ],
+          "additionalPrompt": "Ensure the epic title clearly states the overarching feature or goal.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "An epic must belong to a valid project."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "projectId"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "When updating an epic's status to Done, suggest checking if all child issues are also Done.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify completed epics.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 15,
+          "defaultContextLimit": 10,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": "Group epics by project when listing multiple."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "issues"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete epics that have active issues.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "project",
+          "type": "belongsTo",
+          "sourceModel": "ApmEpic",
+          "sourceField": "projectId",
+          "targetModel": "ApmProject",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The project this epic belongs to."
+        },
+        {
+          "name": "issues",
+          "type": "hasMany",
+          "sourceModel": "ApmEpic",
+          "sourceField": "id",
+          "targetModel": "ApmIssue",
+          "targetField": "epicId",
+          "throughModel": null,
+          "description": "The issues that make up this epic."
+        }
+      ]
+    },
+    {
+      "name": "ApmIssue",
+      "title": "Issue",
+      "description": "An actionable item such as a bug, feature, or task.",
+      "domainName": "Rapider Project & Portfolio Suite",
+      "domainKey": "APM",
+      "datatableName": "ApmIssue",
+      "dataTableName": "ApmIssue",
+      "sqlTableName": "apm_issue",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }} - {{ status }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "title",
+            "projectId",
+            "type"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "description",
+            "status"
+          ],
+          "additionalPrompt": "If the issue type is 'Bug', ensure a description is provided detailing the steps to reproduce.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Priority must be one of: Low, Medium, High, Critical."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "projectId"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "When updating status to 'Done', ensure all required fields are filled.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Cannot change type from Bug to Feature without user confirmation.",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify closed issues.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 25,
+          "defaultContextLimit": 15,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": "Group issues by status and priority when summarizing."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete issues that are currently In Progress.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "epicId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sprintId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "storyPoints",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "labelIds",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "assigneeId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "reporterId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "project",
+          "type": "belongsTo",
+          "sourceModel": "ApmIssue",
+          "sourceField": "projectId",
+          "targetModel": "ApmProject",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The project this issue belongs to."
+        },
+        {
+          "name": "epic",
+          "type": "belongsTo",
+          "sourceModel": "ApmIssue",
+          "sourceField": "epicId",
+          "targetModel": "ApmEpic",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The epic this issue belongs to."
+        },
+        {
+          "name": "sprint",
+          "type": "belongsTo",
+          "sourceModel": "ApmIssue",
+          "sourceField": "sprintId",
+          "targetModel": "ApmSprint",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The sprint this issue is assigned to."
+        },
+        {
+          "name": "labels",
+          "type": "referencesMany",
+          "sourceModel": "ApmIssue",
+          "sourceField": "labelIds",
+          "targetModel": "ApmLabel",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Labels categorized for this issue."
+        }
+      ]
+    },
+    {
+      "name": "ApmProject",
+      "title": "Project",
+      "description": "Represents a high-level initiative or body of work containing epics, sprints, and issues.",
+      "domainName": "Rapider Project & Portfolio Suite",
+      "domainKey": "APM",
+      "datatableName": "ApmProject",
+      "dataTableName": "ApmProject",
+      "sqlTableName": "apm_project",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "name"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "description"
+          ],
+          "additionalPrompt": "When creating a project, ensure the name is concise and professional.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "Project name must be unique."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Do not change the project name unless explicitly requested.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Ensure status transitions make logical sense.",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify archived projects.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 10,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": "Summarize project progress by counting related open vs closed issues if possible."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "epics",
+            "sprints",
+            "issues"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete active projects.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "epics",
+          "type": "hasMany",
+          "sourceModel": "ApmProject",
+          "sourceField": "id",
+          "targetModel": "ApmEpic",
+          "targetField": "projectId",
+          "throughModel": null,
+          "description": "A project can have multiple epics."
+        },
+        {
+          "name": "sprints",
+          "type": "hasMany",
+          "sourceModel": "ApmProject",
+          "sourceField": "id",
+          "targetModel": "ApmSprint",
+          "targetField": "projectId",
+          "throughModel": null,
+          "description": "A project can have multiple sprints."
+        },
+        {
+          "name": "issues",
+          "type": "hasMany",
+          "sourceModel": "ApmProject",
+          "sourceField": "id",
+          "targetModel": "ApmIssue",
+          "targetField": "projectId",
+          "throughModel": null,
+          "description": "A project contains multiple issues."
+        }
+      ]
+    },
+    {
+      "name": "ApmSprint",
+      "title": "Sprint",
+      "description": "A time-boxed iteration for a team to complete a set amount of work.",
+      "domainName": "Rapider Project & Portfolio Suite",
+      "domainKey": "APM",
+      "datatableName": "ApmSprint",
+      "dataTableName": "ApmSprint",
+      "sqlTableName": "apm_sprint",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "goal"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "name",
+            "projectId",
+            "startDate",
+            "endDate"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "goal"
+          ],
+          "additionalPrompt": "Ensure sprint dates do not overlap with existing active sprints in the same project.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "End date must be after start date."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "projectId"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "If completing a sprint, ask the user what to do with incomplete issues.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "End date must be after start date.",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify completed sprints.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 10,
+          "defaultContextLimit": 5,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": "Highlight the sprint goal and days remaining when summarizing an active sprint."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete active sprints.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "goal",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "project",
+          "type": "belongsTo",
+          "sourceModel": "ApmSprint",
+          "sourceField": "projectId",
+          "targetModel": "ApmProject",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The project this sprint belongs to."
+        },
+        {
+          "name": "issues",
+          "type": "hasMany",
+          "sourceModel": "ApmSprint",
+          "sourceField": "id",
+          "targetModel": "ApmIssue",
+          "targetField": "sprintId",
+          "throughModel": null,
+          "description": "The issues assigned to this sprint."
+        }
+      ]
+    },
+    {
+      "name": "DevErrorEvent",
+      "title": "Error Event",
+      "description": "**Append-only immutable evidence** once persisted after PII scrubbing; raw unredacted secrets are never written to disk or event streams.",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevErrorEvent",
+      "dataTableName": "DevErrorEvent",
+      "sqlTableName": "dev_error_event",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Error Event, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "eventId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "issueId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "serviceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "environment",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "releaseVersion",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "occurredAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "symbolicatedFrames",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "breadcrumbs",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "tags",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "runtimeContext",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "activeFlagVariants",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "traceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "spanId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scrubbingApplied",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "userFeedbackNote",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevErrorIssue",
+      "title": "Error Issue",
+      "description": "`WARNING` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevErrorIssue",
+      "dataTableName": "DevErrorIssue",
+      "sqlTableName": "dev_error_issue",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Error Issue, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "shortId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "serviceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "fingerprintHash",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "exceptionType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "culprit",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "level",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevFeatureFlag",
+      "title": "Feature Flag",
+      "description": "When `killSwitchEngaged == true`, evaluation deterministically returns `defaultOffValueJson` (`0ms` override) regardless of `rolloutPct`.",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevFeatureFlag",
+      "dataTableName": "DevFeatureFlag",
+      "sqlTableName": "dev_feature_flag",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Feature Flag, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "flagKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "flagName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "environment",
+          "type": "string",
+          "description": "Allowed values: STAGING, PRODUCTION",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "STAGING",
+            "PRODUCTION"
+          ],
+          "options": [
+            "STAGING",
+            "PRODUCTION"
+          ]
+        },
+        {
+          "name": "valueType",
+          "type": "string",
+          "description": "Allowed values: BOOLEAN, JSON_CONFIG",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "BOOLEAN",
+            "JSON_CONFIG"
+          ],
+          "options": [
+            "BOOLEAN",
+            "JSON_CONFIG"
+          ]
+        },
+        {
+          "name": "defaultOffValueJson",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rolloutPct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "killSwitchEngaged",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "rolledOut100At",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cleanupStatus",
+          "type": "string",
+          "description": "Allowed values: NONE, STALE_CLEANUP_DUE, CLEANUP_ISSUE_OPEN, RETIRED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NONE",
+            "STALE_CLEANUP_DUE",
+            "CLEANUP_ISSUE_OPEN",
+            "RETIRED"
+          ],
+          "options": [
+            "NONE",
+            "STALE_CLEANUP_DUE",
+            "CLEANUP_ISSUE_OPEN",
+            "RETIRED"
+          ]
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "key",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "Optional experiment",
+          "type": "belongsTo",
+          "sourceModel": "DevFeatureFlag",
+          "sourceField": "Optional experimentId",
+          "targetModel": "MktExpExperiment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "DevFeatureFlag Optional experiment foreign key link to MktExpExperiment."
+        }
+      ]
+    },
+    {
+      "name": "DevFlagEnvironment",
+      "title": "Flag Environment",
+      "description": "`key` unique per workspace; `serverSdkKeyHash` stored hashed after initial display; if `requireChangeApproval = true`, direct `updateRuleSet` mutations are rejected unless executed via an `APPROVED` `DevFlagChangeRequest` or audited emergency kill-switch break-glass.",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevFlagEnvironment",
+      "dataTableName": "DevFlagEnvironment",
+      "sqlTableName": "dev_flag_environment",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Flag Environment, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "key",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "colorHex",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isProduction",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "requireChangeApproval",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "minApprovalsRequired",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "serverSdkKeyHash",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "clientPublishableKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sortOrder",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevQualityGate",
+      "title": "Quality Gate",
+      "description": "`minPassRateThreshold` stored as `Decimal128` (`0.0000`–`100.0000`); if `requireWaiverApproval = true`, only an approved Home `WorkItem` transitions a blocked run to `WAIVED`.",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevQualityGate",
+      "dataTableName": "DevQualityGate",
+      "sqlTableName": "dev_quality_gate",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Quality Gate, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "minPassRateThreshold",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "maxCriticalWcagCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requireVisualBaselineApproval",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "blockOnNewFlakyTests",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "requireWaiverApproval",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "isDefault",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isBuiltInCleanCode",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "minNewCoveragePercent",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "maxNewDuplicationPercent",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "maxNewBlockerCriticalCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "minHotspotsReviewedPercent",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "enforceAiCodeAssurance",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevTestCase",
+      "title": "Test Case",
+      "description": "`API` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevTestCase",
+      "dataTableName": "DevTestCase",
+      "sqlTableName": "dev_test_case",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Test Case, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "caseCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "testType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevTestSuite",
+      "title": "Test Suite",
+      "description": "Refs `DevTestEnvironmentMatrix`, `DevQualityGate`, optional `linkedApmEpicId` (`ApmEpic`)",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevTestSuite",
+      "dataTableName": "DevTestSuite",
+      "sqlTableName": "dev_test_suite",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "slug"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Test Suite, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "suiteKind",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevTestEnvironmentMatrix",
+      "title": "Test Environment Matrix",
+      "description": "Referenced by `DevTestSuite` and `DevTestRun`",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevTestEnvironmentMatrix",
+      "dataTableName": "DevTestEnvironmentMatrix",
+      "sqlTableName": "dev_test_environment_matrix",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Test Environment Matrix, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targets",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevTestRun",
+      "title": "Test Run",
+      "description": "`SCHEDULED_CRON` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevTestRun",
+      "dataTableName": "DevTestRun",
+      "sqlTableName": "dev_test_run",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Test Run, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "runNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "suiteId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "matrixId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "triggerSource",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevTestResult",
+      "title": "Test Result",
+      "description": "`FLAKY_RETRY_PASSED` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevTestResult",
+      "dataTableName": "DevTestResult",
+      "sqlTableName": "dev_test_result",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Test Result, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "runId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "testCaseId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetDescriptor",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevVisualSnapshot",
+      "title": "Visual Snapshot",
+      "description": "`UNREVIEWED_DIFF` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevVisualSnapshot",
+      "dataTableName": "DevVisualSnapshot",
+      "sqlTableName": "dev_visual_snapshot",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Visual Snapshot, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "runId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "snapshotKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "routeOrComponent",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "viewportWidth",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "DevAccessibilityFinding",
+      "title": "Accessibility Finding",
+      "description": "`SERIOUS` \\",
+      "domainName": "Rapider Developer Suite",
+      "domainKey": "DEV",
+      "datatableName": "DevAccessibilityFinding",
+      "dataTableName": "DevAccessibilityFinding",
+      "sqlTableName": "dev_accessibility_finding",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Accessibility Finding, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "runId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "routePath",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "webPages": [
+    {
+      "name": "Quality & Test Pulse",
+      "route": "dashboard",
+      "htmlFilePath": "pages/dashboard/dashboard.html",
+      "title": "Quality & Test Pulse",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-home",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "KPI cards (countSWR/findSWR) for 7d Pass Rate %, Active Suites, Unreviewed Visual Diffs, Open WCAG Criticals, and Quarantined Specs; recent DevTestRun timeline."
+    },
+    {
+      "name": "Test Case Catalog",
+      "route": "test-cases",
+      "htmlFilePath": "pages/test-cases/test-cases.html",
+      "title": "Test Case Catalog",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Dual Table + <rapider-kanban> Lifecycle Board (DRAFT, READY, QUARANTINED, DEPRECATED); #activeFilterTagsBar with Clear all; ApmIssue coverage badge; clickable case title/code (test-case-drawer edit / run history)."
+    },
+    {
+      "name": "Suites & Release Plans",
+      "route": "test-suites",
+      "htmlFilePath": "pages/test-suites/test-suites.html",
+      "title": "Suites & Release Plans",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "Hierarchical DevTestSuite table with target pass-rate (Decimal128), linked ApmEpic, scheduled nightly trigger toggle, and Trigger Suite Run primary CTA."
+    },
+    {
+      "name": "CI Runs & Device Matrix",
+      "route": "test-runs",
+      "htmlFilePath": "pages/test-runs/test-runs.html",
+      "title": "CI Runs & Device Matrix",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Real-time & historical DevTestRun list showing Git branch/PR, DevTestEnvironmentMatrix badges, pass/fail/flaky bar, duration, and clickable run identifier (test-run-detail)."
+    },
+    {
+      "name": "Visual Regression & Baselines",
+      "route": "visual-reviews",
+      "htmlFilePath": "pages/visual-reviews/visual-reviews.html",
+      "title": "Visual Regression & Baselines",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "<rapider-kanban> & Grid (UNREVIEWED_DIFF, APPROVED_BASELINE, REJECTED_REGRESSION) across 390px/768px/1440px and light/dark themes; clicks through to visual-snapshot-detail."
+    },
+    {
+      "name": "WCAG Accessibility Audits",
+      "route": "accessibility",
+      "htmlFilePath": "pages/accessibility/accessibility.html",
+      "title": "WCAG Accessibility Audits",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "DevAccessibilityFinding table grouped by WCAG 2.2 rule (AA/AAA), route, severity (CRITICAL, SERIOUS, MODERATE), DOM selector, and 1-click ApmIssue bug creation."
+    },
+    {
+      "name": "Flaky Tests & Quarantine",
+      "route": "flaky-quarantine",
+      "htmlFilePath": "pages/flaky-quarantine/flaky-quarantine.html",
+      "title": "Flaky Tests & Quarantine",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "Leaderboard of specs sorted by Decimal128 flakinessRate, flip-flop commit evidence, Quarantine Spec / Restore to Ready guarded actions, and linked stabilization ApmIssue."
+    },
+    {
+      "name": "Release Gates & Matrices",
+      "route": "quality-gates",
+      "htmlFilePath": "pages/quality-gates/quality-gates.html",
+      "title": "Release Gates & Matrices",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Tabbed configuration for DevQualityGate rules (pass %, max WCAG criticals, visual sign-off) and reusable DevTestEnvironmentMatrix browser/device profiles + Home WorkItem waivers."
+    },
+    {
+      "name": "Coverage & Speed Analytics",
+      "route": "analytics",
+      "htmlFilePath": "pages/analytics/analytics.html",
+      "title": "Coverage & Speed Analytics",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "ApmEpic requirement test coverage matrix, slowest p95 spec leaderboard, browser/OS failure heatmap, and Save-to-Notebook report export."
+    },
+    {
+      "name": "Test Run Diagnostics & Logs",
+      "route": "test-run-detail",
+      "htmlFilePath": "pages/test-run-detail/test-run-detail.html",
+      "title": "Test Run Diagnostics & Logs",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Per-browser/viewport DevTestResult breakdown, embedded video/screenshot/HAR trace links (Platform Files), #104 traceId jump link, Create Bug (ApmIssue), and AI Failure RCA (projectChannelMessage)."
+    },
+    {
+      "name": "Visual Diff Inspector",
+      "route": "visual-snapshot-detail",
+      "htmlFilePath": "pages/visual-snapshot-detail/visual-snapshot-detail.html",
+      "title": "Visual Diff Inspector",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Side-by-side / slider / onion-skin baseline vs. candidate image comparator, Decimal128 pixel-diff badge, dynamic mask region overlay, inline projectChannelMessage thread, and Approve Baseline / Reject buttons."
+    },
+    {
+      "name": "Create / Edit Test Case",
+      "route": "test-case-drawer",
+      "htmlFilePath": "pages/test-case-drawer/test-case-drawer.html",
+      "title": "Create / Edit Test Case",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding form drawer for DevTestCase steps, parameter datasets, ApmIssue requirement links, and spec path; enforces try/catch/finally button reset, SWR cache clear, broadcast, and auto-close."
+    }
+  ],
+  "workflows": [],
+  "variables": [],
+  "tools": [],
+  "pages": [
+    {
+      "name": "Quality & Test Pulse",
+      "route": "dashboard",
+      "htmlFilePath": "pages/dashboard/dashboard.html",
+      "title": "Quality & Test Pulse",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-home",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "KPI cards (countSWR/findSWR) for 7d Pass Rate %, Active Suites, Unreviewed Visual Diffs, Open WCAG Criticals, and Quarantined Specs; recent DevTestRun timeline."
+    },
+    {
+      "name": "Test Case Catalog",
+      "route": "test-cases",
+      "htmlFilePath": "pages/test-cases/test-cases.html",
+      "title": "Test Case Catalog",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Dual Table + <rapider-kanban> Lifecycle Board (DRAFT, READY, QUARANTINED, DEPRECATED); #activeFilterTagsBar with Clear all; ApmIssue coverage badge; clickable case title/code (test-case-drawer edit / run history)."
+    },
+    {
+      "name": "Suites & Release Plans",
+      "route": "test-suites",
+      "htmlFilePath": "pages/test-suites/test-suites.html",
+      "title": "Suites & Release Plans",
+      "group": "Test Repository & Suites",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "Hierarchical DevTestSuite table with target pass-rate (Decimal128), linked ApmEpic, scheduled nightly trigger toggle, and Trigger Suite Run primary CTA."
+    },
+    {
+      "name": "CI Runs & Device Matrix",
+      "route": "test-runs",
+      "htmlFilePath": "pages/test-runs/test-runs.html",
+      "title": "CI Runs & Device Matrix",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "Real-time & historical DevTestRun list showing Git branch/PR, DevTestEnvironmentMatrix badges, pass/fail/flaky bar, duration, and clickable run identifier (test-run-detail)."
+    },
+    {
+      "name": "Visual Regression & Baselines",
+      "route": "visual-reviews",
+      "htmlFilePath": "pages/visual-reviews/visual-reviews.html",
+      "title": "Visual Regression & Baselines",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "<rapider-kanban> & Grid (UNREVIEWED_DIFF, APPROVED_BASELINE, REJECTED_REGRESSION) across 390px/768px/1440px and light/dark themes; clicks through to visual-snapshot-detail."
+    },
+    {
+      "name": "WCAG Accessibility Audits",
+      "route": "accessibility",
+      "htmlFilePath": "pages/accessibility/accessibility.html",
+      "title": "WCAG Accessibility Audits",
+      "group": "Execution & Visual QA",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "DevAccessibilityFinding table grouped by WCAG 2.2 rule (AA/AAA), route, severity (CRITICAL, SERIOUS, MODERATE), DOM selector, and 1-click ApmIssue bug creation."
+    },
+    {
+      "name": "Flaky Tests & Quarantine",
+      "route": "flaky-quarantine",
+      "htmlFilePath": "pages/flaky-quarantine/flaky-quarantine.html",
+      "title": "Flaky Tests & Quarantine",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "Leaderboard of specs sorted by Decimal128 flakinessRate, flip-flop commit evidence, Quarantine Spec / Restore to Ready guarded actions, and linked stabilization ApmIssue."
+    },
+    {
+      "name": "Release Gates & Matrices",
+      "route": "quality-gates",
+      "htmlFilePath": "pages/quality-gates/quality-gates.html",
+      "title": "Release Gates & Matrices",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "Tabbed configuration for DevQualityGate rules (pass %, max WCAG criticals, visual sign-off) and reusable DevTestEnvironmentMatrix browser/device profiles + Home WorkItem waivers."
+    },
+    {
+      "name": "Coverage & Speed Analytics",
+      "route": "analytics",
+      "htmlFilePath": "pages/analytics/analytics.html",
+      "title": "Coverage & Speed Analytics",
+      "group": "Observability & Gates",
+      "icon": "fas fa-code",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "ApmEpic requirement test coverage matrix, slowest p95 spec leaderboard, browser/OS failure heatmap, and Save-to-Notebook report export."
+    },
+    {
+      "name": "Test Run Diagnostics & Logs",
+      "route": "test-run-detail",
+      "htmlFilePath": "pages/test-run-detail/test-run-detail.html",
+      "title": "Test Run Diagnostics & Logs",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Per-browser/viewport DevTestResult breakdown, embedded video/screenshot/HAR trace links (Platform Files), #104 traceId jump link, Create Bug (ApmIssue), and AI Failure RCA (projectChannelMessage)."
+    },
+    {
+      "name": "Visual Diff Inspector",
+      "route": "visual-snapshot-detail",
+      "htmlFilePath": "pages/visual-snapshot-detail/visual-snapshot-detail.html",
+      "title": "Visual Diff Inspector",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Side-by-side / slider / onion-skin baseline vs. candidate image comparator, Decimal128 pixel-diff badge, dynamic mask region overlay, inline projectChannelMessage thread, and Approve Baseline / Reject buttons."
+    },
+    {
+      "name": "Create / Edit Test Case",
+      "route": "test-case-drawer",
+      "htmlFilePath": "pages/test-case-drawer/test-case-drawer.html",
+      "title": "Create / Edit Test Case",
+      "group": "(Hidden)",
+      "icon": "fas fa-code",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Sliding form drawer for DevTestCase steps, parameter datasets, ApmIssue requirement links, and spec path; enforces try/catch/finally button reset, SWR cache clear, broadcast, and auto-close."
+    }
+  ]
+}

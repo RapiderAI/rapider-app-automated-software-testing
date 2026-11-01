@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapider Automated Software Testing</title>
+  <script src="https://kit.fontawesome.com/5b23df26dc.js" crossorigin="anonymous" defer></script>
+  <script src="/assets/js/rapider-components.js" defer></script>
+  <link rel="stylesheet" href="/assets/themes/rapider-tailwind-theme.css">
+  <link rel="stylesheet" href="/assets/themes/crm-expenses-design.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    iframe#appFrame { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="pages/dashboard/dashboard.html"></iframe>
+  <script>
+    const routes = {
+  "dashboard": "pages/dashboard/dashboard.html",
+  "test-cases": "pages/test-cases/test-cases.html",
+  "test-suites": "pages/test-suites/test-suites.html",
+  "test-runs": "pages/test-runs/test-runs.html",
+  "visual-reviews": "pages/visual-reviews/visual-reviews.html",
+  "accessibility": "pages/accessibility/accessibility.html",
+  "flaky-quarantine": "pages/flaky-quarantine/flaky-quarantine.html",
+  "quality-gates": "pages/quality-gates/quality-gates.html",
+  "analytics": "pages/analytics/analytics.html",
+  "test-run-detail": "pages/test-run-detail/test-run-detail.html",
+  "visual-snapshot-detail": "pages/visual-snapshot-detail/visual-snapshot-detail.html",
+  "test-case-drawer": "pages/test-case-drawer/test-case-drawer.html"
+};
+    function handleHash() {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      const route = hash || 'dashboard';
+      const target = routes[route] || routes['dashboard'];
+      const iframe = document.getElementById('appFrame');
+      if (iframe) iframe.src = target;
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', handleHash);
+  </script>
+</body>
+</html>
